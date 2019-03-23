@@ -1,0 +1,8 @@
+一、mysql安装
+1. wget http://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+2. yum localinstall mysql57-community-release-el7-11.noarch.rpm
+3. yum install mysql-community-server
+4. systemctl start mysqld
+
+二、进入mysql
+1. mysql -uroot或mysql
