@@ -6,3 +6,13 @@
 
 二、进入mysql
 1. mysql -uroot或mysql
+2. 由于密码为空，不能让进系统，所以先修改/etc/my.cnf 
+vi /etc/my.cnf
+在[mysqld]下面加上：
+skip-grant-tables
+
+记得systemctl restart mysqld
+3.  update user set authentication_string=password('123456') where user='root';
+
+4. 再把my.cnf中的skip-grant-tables 去掉,记得systemctl restart mysqld
+5. mysql -uroot -p 
